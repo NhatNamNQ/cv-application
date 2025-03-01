@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import GeneralInfo from "@/components/GeneralInfo"
-// import Education from "@/components/Education"
+import Education from "@/components/Education"
 // import Experience from "@/components/Experience"
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({name: '', email: '', phone: ''});
   const [isEditingGeneral, setIsEditingGeneral] = useState(true);
+
+  const [education, setEducation] = useState({school: '', title: '', date: ''});
+  const [isEditingEducation, setIsEditingEducation] = useState(true);
 
   const handleGeneralSubmit = (data) => {
     setGeneralInfo(data);
@@ -23,6 +26,9 @@ function App() {
         isEditing={isEditingGeneral}
         onSubmit={handleGeneralSubmit}
         onEdit={handleGeneralEdit}
+      />
+      <Education
+        data={education}
       />
     </div>
   )

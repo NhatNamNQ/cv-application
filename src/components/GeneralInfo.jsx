@@ -28,7 +28,6 @@ function GeneralInfo({
                     <Label htmlFor='name'>Name</Label>
                     <Input
                         className=''
-                        placeHolder='Name'
                         id='name'
                         name='name'
                         onChange={handleChange}
@@ -38,7 +37,6 @@ function GeneralInfo({
                     <Label>Email</Label>
                     <Input
                         type='email'
-                        placeHolder='example@gmail.com'
                         id='email'
                         name='email'
                         onChange={handleChange}
@@ -47,7 +45,6 @@ function GeneralInfo({
                     <Label>Phone</Label>
                     <Input
                         type='tel'
-                        placeHolder='123-456-7890'
                         id='phone'
                         name='phone'
                         onChange={handleChange}
