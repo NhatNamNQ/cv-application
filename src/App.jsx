@@ -16,7 +16,14 @@ function App() {
     setIsEditingGeneral(false);
   }
 
+  const handleEducationSubmit = (data) => {
+    setEducation(data);
+    setIsEditingEducation(false);
+  }
+
+
   const handleGeneralEdit = () => setIsEditingGeneral(true);
+  const handleEducationEdit = () => setIsEditingEducation(true);
 
   return (
     <div className='max-w-4xl p-4 text-left'>
@@ -29,6 +36,9 @@ function App() {
       />
       <Education
         data={education}
+        isEditing={isEditingEducation}
+        onSubmit={handleEducationSubmit}
+        onEdit={handleEducationEdit}
       />
     </div>
   )

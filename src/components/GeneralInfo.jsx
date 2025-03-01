@@ -22,7 +22,7 @@ function GeneralInfo({
 
     return (
         <section className="general-info">
-            <h2>General Information</h2>
+            <h2 className="text-2xl font-bold my-4">General Information</h2>
             {isEditing ? (
                 <form onSubmit={handleSubmit}>
                     <Label htmlFor='name'>Name</Label>
